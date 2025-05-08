@@ -49,28 +49,33 @@
     <a href="https://archive.org/details/windows-media-11-x-64-en"><img length=140 src="images/windows_media_player.gif"
                                                                         width=90></a>
 </div>
-<h3 id="egg" style="color:white;display:none;">Do you like easter eggs?</h3>
-<script> if (document.cookie === "e=hard_boiled_easter_egg") {
-    document.getElementById('egg').style.display = 'block';
-} else {
-    document.getElementById('egg').style.display = 'none';
-}</script>
-<!-- Default Statcounter code for My personal website http://partypiotr.xyz -->
-<script type="text/javascript">
-    var sc_project = 13133074;
-    var sc_invisible = 1;
-    var sc_security = "01992d99";
+<h3 aria-hidden="true" class="easter-egg" id="egg">Do you like easter eggs?</h3>
+
+<style>
+    .easter-egg {
+        color: white;
+        visibility: hidden;
+    }
+
+    .easter-egg--visible {
+        visibility: visible;
+    }
+</style>
+
+<script>
+    (function () {
+        const eggElement = document.getElementById('egg');
+        if (!eggElement) return;
+
+        try {
+            if (document.cookie.includes('e=hard_boiled_easter_egg')) {
+                eggElement.classList.add('easter-egg--visible');
+                eggElement.setAttribute('aria-hidden', 'false');
+            }
+        } catch (error) {
+            console.error('Error processing easter egg:', error);
+        }
+    })();
 </script>
-<script async
-        src="https://www.statcounter.com/counter/counter.js" type="text/javascript"></script>
-<noscript>
-    <div class="statcounter"><a href="https://statcounter.com/"
-                                target="_blank" title="Web Analytics"><img alt="Web Analytics"
-                                                                           class="statcounter"
-                                                                           referrerPolicy="no-referrer-when-downgrade"
-                                                                           src="https://c.statcounter.com/13133074/0/01992d99/1/"></a>
-    </div>
-</noscript>
-<!-- End of Statcounter Code -->
 </body>
 </html>
