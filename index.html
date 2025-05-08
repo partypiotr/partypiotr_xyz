@@ -49,6 +49,40 @@
     <a href="https://archive.org/details/windows-media-11-x-64-en"><img length=140 src="images/windows_media_player.gif"
                                                                         width=90></a>
 </div>
+<div style="display:flex; justify-content:center;align-items:center;">
+    <h2>everyone will see what you type here!</h2>
+    <input id="textbox" placeholder="Loading..." type="text"/>
+
+    <script>
+        const textbox = document.getElementById('textbox');
+
+        // Fetch current value from PHP
+        fetch('get_text.php')
+            .then(res => res.json())
+            .then(data => {
+                textbox.value = data.textbox;
+            })
+            .catch(err => console.error('Fetch error:', err));
+
+        // Update value in the database
+        textbox.addEventListener('input', () => {
+            const newText = textbox.value;
+            fetch('update_text.php', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({newText}),
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        console.log('Database updated');
+                    } else {
+                        console.error('Update failed:', data.error);
+                    }
+                })
+                .catch(err => console.error('Update error:', err));
+        });
+    </script>
 <h3 aria-hidden="true" class="easter-egg" id="egg">Do you like easter eggs?</h3>
 
 <style>
