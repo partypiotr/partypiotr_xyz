@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+   body{
+    align-text:center;
+   }
+  </style>
+  <meta name="viewport" value="width=device-width initial-scale=1.0">
+ </head>
+ <body>
+  <h1>rickroll placeholder</h1>
+  <a href="index.html">Menu</a>
+ </body>
+</html>

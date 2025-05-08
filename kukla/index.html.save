@@ -1,0 +1,18 @@
+
+<html lang="pl"> <head> <style> exit body{
+    text-align: center;
+    font-family:arial;
+   }
+  </style>
+  <title>Kukla best quotes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+ </head>
+ <body>
+  <h1>Kukla best quotes</h1>
+  <h3>- "Zgromadzenie testosteronu"</h3>
+  <h3>- "Romeo się znalazł jeden"</h3>
+  <h3>- "Na randki to się umawiać po lekcjach"</h3>
+  <h3>- "Kończ wać pań wstydu oszczędź"</h3>  
+ </body>
+</html> 

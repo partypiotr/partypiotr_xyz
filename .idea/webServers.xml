@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="fec548a9-54d9-43e4-bb7b-04d32726a147" name="partypiotr_xyz" url="http://partypiotr.xyz">
+        <fileTransfer rootFolder="/home/partypiotr/" accessType="SFTP" host="ssh-partypiotr.alwaysdata.net" port="22" sshConfigId="18423f06-56fa-4a78-97a6-5004d0f582a3" sshConfig="partypiotr@ssh-partypiotr.alwaysdata.net:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
