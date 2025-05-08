@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "panel"
-AuthUserFile .htpasswd
-Require valid-user
