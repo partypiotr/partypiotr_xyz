@@ -1,7 +1,7 @@
 <?php
 // process.php
 
-$webhook_url = 'https://discord.com/api/webhooks/1366848000474874056/vjMfmUmENrA51ixmb3PJT1UOsjCxvJcN2jJmALZDFNq3BCewtvBQKZqJTZnEuxqE9twP';
+$webhook_url = $_ENV["webhook"];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Accept raw UTF-8 input
