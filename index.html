@@ -28,10 +28,12 @@
     <pre>now featuring IE gif!                              try clicking the pikachu!                                               still working as intended. i think.                                      we have a visitor counter now!                            every gif is now clickable!</pre>
 </marquee>
 <div style="display:flex;justify-content:center;align-items:center;">
-    <a href="rickroll.html"><img length=400 src="images/pikaconstruction.gif" width=300></a>
+    <a href="rickroll.html"><img length=400 onclick="playAudio('windows-98-click.wav')" src="images/pikaconstruction.gif"
+                                 width=300></a>
 </div>
 <div style="display:flex; justify-content:center;align-items:center;">
-    <a href="mailto:webmaster@partypiotr.xyz" style="color:white;font-size:25px">send me some electronic mail!</a>
+    <a href="mailto:webmaster@partypiotr.xyz" onclick="playAudio('windows-98-click.wav')"
+       style="color:white;font-size:25px">send me some electronic mail!</a>
 </div>
 <h3 style="color:white;text-align:center;font-size: 30px;">send me a message!</h3>
 <div style="display:flex; justify-content:center;align-items:center;">
@@ -42,7 +44,7 @@
         <label for="message" style="color:white;font-size: 30px;">Message:</label>
         <input id="message" name="message" required type="text"><br><br>
 
-        <input type="submit" value="Send">
+        <input onclick="playAudio('windows-98-click.wav')" type="submit" value="Send">
     </form>
 </div>
 <a href="kukla/index.html" style="color:white;display:block; text-align: center;">Kukla best quotes</a>
@@ -61,8 +63,11 @@
 
 <div style="display:flex; justify-content:center;align-items:center;">
     <img src="https://hitscounter.dev/api/hit?url=partypiotr.xyz&label=Visitors&icon=joystick&color=%23198754">
-    <a href="https://archive.org/details/IE8WinXPMulti"><img length=140 src="images/iexplorer.gif" width=90></a>
-    <a href="https://archive.org/details/windows-media-11-x-64-en"><img length=140 src="images/windows_media_player.gif"
+    <a href="https://archive.org/details/IE8WinXPMulti" onclick="playAudio('windows-98-click.wav')"><img length=140
+                                                                                                         src="images/iexplorer.gif"
+                                                                                                         width=90></a>
+    <a href="https://archive.org/details/windows-media-11-x-64-en" onclick="playAudio('windows-98-click.wav')"><img
+            length=140 src="images/windows_media_player.gif"
                                                                         width=90></a>
 </div>
 <h3 aria-hidden="true" class="easter-egg" id="egg">Do you like easter eggs?</h3>
@@ -92,6 +97,11 @@
             console.error('Error processing easter egg:', error);
         }
     })();
+</script>
+<script>
+    function playAudio(url) {
+        new Audio(url).play();
+    }
 </script>
 </body>
 </html>
